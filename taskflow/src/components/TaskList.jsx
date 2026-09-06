@@ -13,7 +13,7 @@ function TaskList({ tasks, emptyMessage }) {
   return (
     <div className="task-list">
       {tasks.map((task) => (
-        <TaskCard key={task.id} task={task} />
+        <TaskCard key={task._id} task={task} />
       ))}
     </div>
   );

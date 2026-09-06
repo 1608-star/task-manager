@@ -16,7 +16,7 @@ function Completed() {
   const clearAll = () => {
     if (window.confirm("Are you sure you want to delete all completed tasks?")) {
       completedTasks.forEach((task) => {
-        dispatch({ type: "DELETE", payload: task.id });
+        dispatch({ type: "DELETE", payload: task._id });
       });
     }
   };

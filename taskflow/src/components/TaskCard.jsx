@@ -47,7 +47,7 @@ function TaskCard({ task }) {
               <button
                 className="btn btn-progress"
                 onClick={() =>
-                  dispatch({ type: "INPROGRESS", payload: task.id })
+                  dispatch({ type: "INPROGRESS", payload: task._id })
                 }
               >
                 ▶️ Start
@@ -55,7 +55,7 @@ function TaskCard({ task }) {
             )}
             <button
               className="btn btn-complete"
-              onClick={() => dispatch({ type: "COMPLETE", payload: task.id })}
+              onClick={() => dispatch({ type: "COMPLETE", payload: task._id })}
             >
               ✅ Complete
             </button>
@@ -63,7 +63,7 @@ function TaskCard({ task }) {
         )}
         <button
           className="btn btn-delete"
-          onClick={() => dispatch({ type: "DELETE", payload: task.id })}
+          onClick={() => dispatch({ type: "DELETE", payload: task._id })}
         >
           🗑️ Delete
         </button>
@@ -71,6 +71,5 @@ function TaskCard({ task }) {
     </div>
   );
 }
-
 
 export default TaskCard;
